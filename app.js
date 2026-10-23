@@ -87,7 +87,7 @@ function openDrawer(html, back) {
   if (b) b.onclick = () => back.open();
   $('#drawer-close').focus();
 }
-function closeDrawer() { $('#drawer').hidden = true; }
+function closeDrawer() { $('#drawer').hidden = true; if (/^#(lesson|strand)-/.test(location.hash)) linkHere('#' + currentView); }
 
 function topicHTML(key) {
   const [title, lines] = TOPICS[key];
@@ -267,29 +267,47 @@ async function openStudents() {
 }
 
 /* ── views ── */
-function show(view) {
+let currentView = 'overview';
+function show(view, keepHash) {
+  currentView = view;
   ['overview', 'map', 'who', 'students'].forEach(v => {
     $(`#view-${v}`).hidden = v !== view;
     $(`#tab-${v}`).setAttribute('aria-selected', String(v === view));
   });
-  if (location.hash !== '#' + view) history.replaceState(null, '', '#' + view);
+  if (!keepHash && location.hash !== '#' + view) history.replaceState(null, '', '#' + view);
 }
+
+/* ── a link for every lesson and strand (Mr. Olivera 10/23: "it should be linkable to read an explanation of each
+   lesson"): #lesson-AS3 opens that lesson's explanation over the Map, #strand-pv a strand's. The teacher dashboard's
+   🧪 Lab page links each lesson here. While one is open, the address bar holds its link; closing it puts the view back. */
+function openFromHash() {
+  const m = /^#(lesson|strand)-([A-Za-z]{2}\d?)$/.exec(location.hash);
+  if (!m) return false;
+  const id = m[1] === 'lesson' ? m[2].toUpperCase() : m[2].toLowerCase();
+  if (m[1] === 'lesson' ? !C.lessons[id] : !strand(id)) return false;
+  show('map', true);
+  $('#drawer-body').dataset.kid = '';
+  openDrawer(m[1] === 'lesson' ? lessonHTML(id) : strandHTML(id));
+  return true;
+}
+const linkHere = hash => history.replaceState(null, '', hash);
 
 document.addEventListener('click', e => {
   const t = e.target.closest('[data-view],[data-explain],[data-lesson],[data-strand],[data-kid]');
   if (!t) { if (e.target === $('#drawer')) closeDrawer(); return; }
   if (t.dataset.view) return show(t.dataset.view);
-  if (t.dataset.explain) return openDrawer(topicHTML(t.dataset.explain));
+  if (t.dataset.explain) { openDrawer(topicHTML(t.dataset.explain)); return linkHere('#' + currentView); }
   const inKid = $('#drawer').hidden ? null : $('#drawer-body').dataset.kid;
   if (t.dataset.lesson) {
     const back = inKid ? { label: displayName(inKid), open: () => openKid(inKid) } : null;
     $('#drawer-body').dataset.kid = '';
-    return openDrawer(lessonHTML(t.dataset.lesson), back);
+    openDrawer(lessonHTML(t.dataset.lesson), back);
+    return linkHere('#lesson-' + t.dataset.lesson);
   }
-  if (t.dataset.strand) { $('#drawer-body').dataset.kid = ''; return openDrawer(strandHTML(t.dataset.strand)); }
+  if (t.dataset.strand) { $('#drawer-body').dataset.kid = ''; openDrawer(strandHTML(t.dataset.strand)); return linkHere('#strand-' + t.dataset.strand); }
   if (t.dataset.kid) return openKid(t.dataset.kid);
 });
-function openKid(name) { openDrawer(childHTML(name)); $('#drawer-body').dataset.kid = name; }
+function openKid(name) { openDrawer(childHTML(name)); $('#drawer-body').dataset.kid = name; linkHere('#' + currentView); }
 $('#drawer-close').onclick = closeDrawer;
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
 $('#pin-form').addEventListener('submit', e => {
@@ -302,5 +320,6 @@ $('#full-names').addEventListener('change', () => { renderRoster(); const k = $(
 renderMap();
 renderWho();
 renderCounts();
-show(['overview', 'map', 'who', 'students'].includes(location.hash.slice(1)) ? location.hash.slice(1) : 'overview');
+if (!openFromHash()) show(['overview', 'map', 'who', 'students'].includes(location.hash.slice(1)) ? location.hash.slice(1) : 'overview');
+window.addEventListener('hashchange', openFromHash);
 })();
