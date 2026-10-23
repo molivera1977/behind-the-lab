@@ -37,7 +37,7 @@ const TOPICS = {
   'step-watch': ['👀 Watch', [
     'A worked example, one idea per screen, with the same picture or story the questions use.',
     'It is read aloud and must be heard to the end before Next appears.',
-    'On a retry it is a NEW worked example taught the same way (Mr. Olivera 10/21: "one method, new numbers").']],
+    'In Adding and Subtracting, Big Numbers and Reading Level 2, a retry brings a NEW worked example, taught the same way (Mr. Olivera 10/21: "one method, new numbers"). In the other lessons the worked example repeats and the questions are new. Each lesson\'s page says which.']],
   'step-mine': ['⭐ One you missed before', [
     'On the first try, the child sees one of their OWN past mistakes from the class sites, worked out: the question, what they picked, the right answer and why.',
     'In reading, it comes from their own Read Literary practice misses.']],
@@ -101,9 +101,8 @@ function lessonHTML(id) {
     ? `${l.parts.pre} Show-what-you-know question${l.parts.pre === 1 ? '' : 's'} on a short story · ${l.parts.watch} worked example${l.parts.watch === 1 ? '' : 's'} · ${l.parts.step} steps · ${l.parts.scored} scored question${l.parts.scored === 1 ? '' : 's'} (${l.points} points) on two new stories`
     : `${l.pre ? `${l.parts.pre} Show-what-you-know questions · ` : ''}${l.parts.watch} worked example${l.parts.watch === 1 ? '' : 's'} · ${l.parts.step} steps · ${l.parts.scored} scored questions`;
   const TYPE = { mc: 'one answer', ebsr: 'Part A + Part B', hot: 'click the sentences', ms: 'choose TWO' };
-  const retry = l.reading
-    ? `${l.versions} versions: a retry gets new stories${l.stories && l.stories.newTeachEveryTry ? ' and a new worked example' : ''}.`
-    : `${l.versions} versions: a retry gets new numbers and a new worked example, taught the same way.`;
+  const retry = `${l.versions} versions: a retry gets ${l.reading ? 'new stories' : 'new numbers'}` +
+    (!l.parts.watch ? '.' : l.newTeach ? ' and a new worked example, taught the same way.' : ' (the worked example stays the same).');
   const s = l.sample;
   let sample = '';
   if (s) {

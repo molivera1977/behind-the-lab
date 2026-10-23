@@ -134,6 +134,7 @@ window.BTL_CATALOG = {
    "passPct": 90,
    "need": 9,
    "versions": 4,
+   "newTeach": true,
    "types": [
     "mc"
    ],
@@ -173,6 +174,7 @@ window.BTL_CATALOG = {
    "passPct": 90,
    "need": 9,
    "versions": 4,
+   "newTeach": true,
    "types": [
     "mc"
    ],
@@ -212,6 +214,7 @@ window.BTL_CATALOG = {
    "passPct": 90,
    "need": 9,
    "versions": 4,
+   "newTeach": true,
    "types": [
     "mc"
    ],
@@ -251,6 +254,7 @@ window.BTL_CATALOG = {
    "passPct": 90,
    "need": 9,
    "versions": 4,
+   "newTeach": true,
    "types": [
     "mc"
    ],
@@ -290,6 +294,7 @@ window.BTL_CATALOG = {
    "passPct": 90,
    "need": 9,
    "versions": 4,
+   "newTeach": true,
    "types": [
     "mc"
    ],
@@ -329,6 +334,7 @@ window.BTL_CATALOG = {
    "passPct": 90,
    "need": 18,
    "versions": 4,
+   "newTeach": false,
    "types": [
     "mc"
    ],
@@ -368,6 +374,7 @@ window.BTL_CATALOG = {
    "passPct": 90,
    "need": 9,
    "versions": 4,
+   "newTeach": false,
    "types": [
     "mc"
    ],
@@ -407,6 +414,7 @@ window.BTL_CATALOG = {
    "passPct": 90,
    "need": 9,
    "versions": 4,
+   "newTeach": false,
    "types": [
     "mc"
    ],
@@ -446,6 +454,7 @@ window.BTL_CATALOG = {
    "passPct": 90,
    "need": 9,
    "versions": 4,
+   "newTeach": false,
    "types": [
     "mc"
    ],
@@ -485,6 +494,7 @@ window.BTL_CATALOG = {
    "passPct": 90,
    "need": 9,
    "versions": 4,
+   "newTeach": false,
    "types": [
     "mc"
    ],
@@ -524,6 +534,7 @@ window.BTL_CATALOG = {
    "passPct": 90,
    "need": 9,
    "versions": 4,
+   "newTeach": false,
    "types": [
     "mc"
    ],
@@ -563,6 +574,7 @@ window.BTL_CATALOG = {
    "passPct": 90,
    "need": 9,
    "versions": 4,
+   "newTeach": false,
    "types": [
     "mc"
    ],
@@ -602,6 +614,7 @@ window.BTL_CATALOG = {
    "passPct": 90,
    "need": 18,
    "versions": 4,
+   "newTeach": false,
    "types": [
     "mc"
    ],
@@ -641,6 +654,7 @@ window.BTL_CATALOG = {
    "passPct": 75,
    "need": 8,
    "versions": 4,
+   "newTeach": false,
    "types": [
     "mc"
    ],
@@ -680,6 +694,7 @@ window.BTL_CATALOG = {
    "passPct": 75,
    "need": 8,
    "versions": 4,
+   "newTeach": false,
    "types": [
     "mc"
    ],
@@ -719,6 +734,7 @@ window.BTL_CATALOG = {
    "passPct": 75,
    "need": 8,
    "versions": 4,
+   "newTeach": false,
    "types": [
     "mc"
    ],
@@ -758,6 +774,7 @@ window.BTL_CATALOG = {
    "passPct": 75,
    "need": 8,
    "versions": 4,
+   "newTeach": false,
    "types": [
     "mc"
    ],
@@ -797,6 +814,7 @@ window.BTL_CATALOG = {
    "passPct": 75,
    "need": 8,
    "versions": 4,
+   "newTeach": false,
    "types": [
     "mc"
    ],
@@ -836,6 +854,7 @@ window.BTL_CATALOG = {
    "passPct": 75,
    "need": 8,
    "versions": 4,
+   "newTeach": false,
    "types": [
     "mc"
    ],
@@ -875,6 +894,7 @@ window.BTL_CATALOG = {
    "passPct": 75,
    "need": 8,
    "versions": 4,
+   "newTeach": false,
    "types": [
     "mc"
    ],
@@ -914,6 +934,7 @@ window.BTL_CATALOG = {
    "passPct": 75,
    "need": 8,
    "versions": 4,
+   "newTeach": false,
    "types": [
     "mc"
    ],
@@ -953,6 +974,7 @@ window.BTL_CATALOG = {
    "passPct": 75,
    "need": 15,
    "versions": 4,
+   "newTeach": false,
    "types": [
     "mc"
    ],
@@ -992,6 +1014,7 @@ window.BTL_CATALOG = {
    "passPct": 75,
    "need": 8,
    "versions": 4,
+   "newTeach": false,
    "types": [
     "mc"
    ],
@@ -1031,6 +1054,7 @@ window.BTL_CATALOG = {
    "passPct": 75,
    "need": 8,
    "versions": 4,
+   "newTeach": false,
    "types": [
     "mc"
    ],
@@ -1070,6 +1094,7 @@ window.BTL_CATALOG = {
    "passPct": 75,
    "need": 8,
    "versions": 4,
+   "newTeach": false,
    "types": [
     "mc"
    ],
@@ -1109,6 +1134,7 @@ window.BTL_CATALOG = {
    "passPct": 75,
    "need": 8,
    "versions": 4,
+   "newTeach": false,
    "types": [
     "mc"
    ],
@@ -1148,6 +1174,7 @@ window.BTL_CATALOG = {
    "passPct": 75,
    "need": 8,
    "versions": 4,
+   "newTeach": false,
    "types": [
     "mc"
    ],
@@ -1187,6 +1214,7 @@ window.BTL_CATALOG = {
    "passPct": 75,
    "need": 15,
    "versions": 4,
+   "newTeach": false,
    "types": [
     "mc"
    ],
@@ -1226,6 +1254,7 @@ window.BTL_CATALOG = {
    "passPct": 75,
    "need": 8,
    "versions": 4,
+   "newTeach": true,
    "types": [
     "mc"
    ],
@@ -1265,6 +1294,7 @@ window.BTL_CATALOG = {
    "passPct": 75,
    "need": 8,
    "versions": 4,
+   "newTeach": true,
    "types": [
     "mc"
    ],
@@ -1304,6 +1334,7 @@ window.BTL_CATALOG = {
    "passPct": 75,
    "need": 8,
    "versions": 4,
+   "newTeach": true,
    "types": [
     "mc"
    ],
@@ -1343,6 +1374,7 @@ window.BTL_CATALOG = {
    "passPct": 75,
    "need": 8,
    "versions": 4,
+   "newTeach": true,
    "types": [
     "mc"
    ],
@@ -1381,6 +1413,7 @@ window.BTL_CATALOG = {
    "passPct": 75,
    "need": 15,
    "versions": 4,
+   "newTeach": false,
    "types": [
     "mc"
    ],
@@ -1420,6 +1453,7 @@ window.BTL_CATALOG = {
    "passPct": 75,
    "need": 8,
    "versions": 4,
+   "newTeach": true,
    "types": [
     "mc"
    ],
@@ -1459,6 +1493,7 @@ window.BTL_CATALOG = {
    "passPct": 75,
    "need": 8,
    "versions": 4,
+   "newTeach": true,
    "types": [
     "mc"
    ],
@@ -1498,6 +1533,7 @@ window.BTL_CATALOG = {
    "passPct": 75,
    "need": 8,
    "versions": 4,
+   "newTeach": true,
    "types": [
     "mc"
    ],
@@ -1537,6 +1573,7 @@ window.BTL_CATALOG = {
    "passPct": 75,
    "need": 8,
    "versions": 4,
+   "newTeach": true,
    "types": [
     "mc"
    ],
@@ -1576,6 +1613,7 @@ window.BTL_CATALOG = {
    "passPct": 75,
    "need": 15,
    "versions": 4,
+   "newTeach": false,
    "types": [
     "mc"
    ],
@@ -1615,6 +1653,7 @@ window.BTL_CATALOG = {
    "passPct": 75,
    "need": 6,
    "versions": 4,
+   "newTeach": false,
    "types": [
     "mc"
    ],
@@ -1665,6 +1704,7 @@ window.BTL_CATALOG = {
    "passPct": 75,
    "need": 6,
    "versions": 4,
+   "newTeach": false,
    "types": [
     "ebsr"
    ],
@@ -1725,6 +1765,7 @@ window.BTL_CATALOG = {
    "passPct": 75,
    "need": 6,
    "versions": 4,
+   "newTeach": false,
    "types": [
     "hot"
    ],
@@ -1775,6 +1816,7 @@ window.BTL_CATALOG = {
    "passPct": 75,
    "need": 6,
    "versions": 4,
+   "newTeach": true,
    "types": [
     "mc"
    ],
@@ -1825,6 +1867,7 @@ window.BTL_CATALOG = {
    "passPct": 75,
    "need": 6,
    "versions": 4,
+   "newTeach": true,
    "types": [
     "ebsr"
    ],
@@ -1885,6 +1928,7 @@ window.BTL_CATALOG = {
    "passPct": 75,
    "need": 6,
    "versions": 4,
+   "newTeach": true,
    "types": [
     "hot"
    ],
@@ -1936,6 +1980,7 @@ window.BTL_CATALOG = {
    "passPct": 75,
    "need": 6,
    "versions": 4,
+   "newTeach": true,
    "types": [
     "ms"
    ],

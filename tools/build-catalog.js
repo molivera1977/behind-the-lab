@@ -74,6 +74,9 @@ function build() {
         newTeachEveryTry: RC[id].versions.every(v => !!v.teach) };
     } else versions = W[`LAB_${id}_V`] || (W[`LAB_${id}`] ? [W[`LAB_${id}`]] : []);
     const v1 = versions[0] || [];
+    // a retry teaches again on a NEW worked example? (the watch screens differ from version to version)
+    const watchText = v => (v || []).filter(q => q.kind === 'watch').map(q => q.text || '').join('\n');
+    const newTeach = versions.length > 1 && new Set(versions.map(watchText)).size === versions.length;
     const count = k => v1.filter(q => (k ? q.kind === k : !q.kind)).length;
     const points = v1.filter(q => !q.kind).reduce((n, q) => n + (reading ? R.pointsOf(q) : 1), 0);
     const pct = L.facts ? FACTS : PASS;
@@ -92,7 +95,7 @@ function build() {
       skill: ll.skill || (reading ? [...new Set(v1.filter(q => !q.kind).flatMap(q => [].concat(q.skill || [])))].join(', ') : ''),
       facts: !!L.facts, check: !!L.check, reading, pre: L.pre !== false,
       parts: { pre: count('pre'), watch: count('watch'), step: count('step'), scored: count() },
-      points, passPct: pct, need: Math.ceil(pct / 100 * points), versions: versions.length, types, stories, sample
+      points, passPct: pct, need: Math.ceil(pct / 100 * points), versions: versions.length, newTeach, types, stories, sample
     };
   }));
   return { strands: STRANDS.map(st => ({ id: st.id, icon: st.icon, name: st.name, lessons: st.lessons.slice(), after: st.after || null })),
