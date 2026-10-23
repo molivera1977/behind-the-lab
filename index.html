@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex" />
+<title>Behind the LAB</title>
+<link rel="stylesheet" href="style.css?v=btl1" />
+</head>
+<body>
+<!-- BEHIND THE LAB (Mr. Olivera 10/22): how Mr. Olivera's Lab works, lesson by lesson, and — behind the teacher PIN — what each
+     child is assigned and in what order. No student names are written in this site: they come from the results sheet
+     at run time, behind the PIN, shown as "First L." until the teacher switches on full names. -->
+<header class="top">
+  <div class="wrap">
+    <h1>📘 Behind the LAB</h1>
+    <p class="sub">How Mr. Olivera's Lab works — every strand, every lesson, and why each one is there.</p>
+    <nav class="tabs" role="tablist">
+      <button class="tab" role="tab" data-view="overview" id="tab-overview">The Lab in one page</button>
+      <button class="tab" role="tab" data-view="map" id="tab-map">The Map</button>
+      <button class="tab" role="tab" data-view="who" id="tab-who">Who gets what</button>
+      <button class="tab" role="tab" data-view="students" id="tab-students">🔒 My Students</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <!-- THE LAB IN ONE PAGE -->
+  <section id="view-overview" class="view" hidden>
+    <div class="grid2">
+      <article class="card">
+        <h2>What the Lab is</h2>
+        <p>The Lab is a set of short lessons on a Chromebook, each one made for the child who takes it. It sits <b>beside</b> the regular Grade 4 lessons, never in place of them: Lab students still do every class module with the class.</p>
+        <p>It exists because of the numbers. On the Grade 3 SBAC (Spring 2026), <b>17 of 22</b> students in this class were at Level 1 in ELA and <b>12 of 22</b> in math. This fall's interim tests showed the same gaps, skill by skill.</p>
+        <button class="more" data-explain="why-lab">Where these numbers come from</button>
+      </article>
+      <article class="card">
+        <h2>Who it is for, and when</h2>
+        <p>Every child gets the strands that match <b>their own</b> results: the basics for the students furthest behind, stretch work for the middle and top. Kids work in the Lab during specials and WIN time, and the teacher circulates.</p>
+        <p class="stat-row" id="live-counts" aria-live="polite">Loading how many students are on each strand…</p>
+      </article>
+    </div>
+
+    <article class="card">
+      <h2>How every lesson works</h2>
+      <p>Every lesson has the same five parts. Click a part to see what happens in it.</p>
+      <ol class="steps" id="lesson-steps">
+        <li><button data-explain="step-pre"><span class="si">🎯</span><b>Show what you know</b><small>a few questions first</small></button></li>
+        <li><button data-explain="step-watch"><span class="si">👀</span><b>Watch</b><small>a worked example, heard to the end</small></button></li>
+        <li><button data-explain="step-mine"><span class="si">⭐</span><b>One you missed before</b><small>the child's own mistake</small></button></li>
+        <li><button data-explain="step-steps"><span class="si">🪜</span><b>Step by step</b><small>small steps, not scored</small></button></li>
+        <li><button data-explain="step-turn"><span class="si">✏️</span><b>Your turn</b><small>the scored questions</small></button></li>
+      </ol>
+    </article>
+
+    <div class="grid3">
+      <article class="card"><h3>Made for each child</h3><p>A lesson mixes in the child's <b>own past mistakes</b> from the class sites, and notices when the same kind of mistake comes back.</p><button class="more" data-explain="tailor">How</button></article>
+      <article class="card"><h3>Passing and trying again</h3><p>A lesson passes at <b>75%</b>; math-facts lessons at <b>90%</b>. A retry teaches the same way again with <b>new numbers or new stories</b>.</p><button class="more" data-explain="pass">More</button></article>
+      <article class="card"><h3>The order of lessons</h3><p>Lessons go in order. <b>Math and reading take turns.</b> Some strands wait until an earlier strand is passed.</p><button class="more" data-explain="route">The rules</button></article>
+      <article class="card"><h3>Everything is read aloud</h3><p>Every question, choice and story is read aloud, and must be <b>heard to the end</b> before the child can go on.</p><button class="more" data-explain="aloud">Why</button></article>
+      <article class="card"><h3>Records</h3><p>Every try is saved to the results sheet; the teacher's dashboard shows each child's progress, the mistakes they repeat, and who is stuck.</p><button class="more" data-explain="records">More</button></article>
+      <article class="card"><h3>Privacy</h3><p>No student's name is written in the Lab or in this site. Who is on which plan comes from the results sheet; each child's evidence stays on the teacher's computer.</p><button class="more" data-explain="privacy">More</button></article>
+    </div>
+  </section>
+
+  <!-- THE MAP -->
+  <section id="view-map" class="view" hidden>
+    <p class="lead">All <span id="n-lessons">the</span> lessons, strand by strand, in the order a child meets them. <b>Click any lesson</b> to see what it reviews, its standard and level, a real question from it, and why it is in the Lab.</p>
+    <div class="legend"><span class="area-facts">Math facts</span><span class="area-number">Number sense</span><span class="area-reading">Reading</span></div>
+    <div id="map"></div>
+  </section>
+
+  <!-- WHO GETS WHAT -->
+  <section id="view-who" class="view" hidden>
+    <p class="lead">Why a child is given each strand — the rule for each one, and the results behind it. (Each child's own evidence is kept on the teacher's computer, not on the web.)</p>
+    <div id="who"></div>
+  </section>
+
+  <!-- MY STUDENTS (teacher PIN) -->
+  <section id="view-students" class="view" hidden>
+    <div id="pin-box" class="card pin-box">
+      <h2>🔒 My Students</h2>
+      <p>For Mr. Olivera: each child's plan, in the order the Lab gives it. Enter the teacher PIN.</p>
+      <form id="pin-form" autocomplete="off">
+        <input id="pin-input" type="password" inputmode="numeric" maxlength="8" aria-label="Teacher PIN" placeholder="PIN" />
+        <button type="submit" class="btn">Open</button>
+        <span id="pin-msg" class="pin-msg" role="alert"></span>
+      </form>
+    </div>
+    <div id="students" hidden>
+      <div class="students-bar">
+        <label class="switch"><input type="checkbox" id="full-names" /> 👁 Show full names</label>
+        <span id="students-status" class="muted" aria-live="polite"></span>
+      </div>
+      <div id="roster"></div>
+    </div>
+  </section>
+</main>
+
+<!-- the explanation drawer: opens on a click anywhere on the site -->
+<div id="drawer" class="drawer" hidden role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+  <div class="drawer-panel">
+    <button class="drawer-close" id="drawer-close" aria-label="Close">✕</button>
+    <div id="drawer-body"></div>
+  </div>
+</div>
+
+<footer class="wrap foot"><p id="built-note">Built from the Lab's own lesson files. No student names are in this site's code.</p></footer>
+
+<script src="data/catalog.js?v=btl1"></script>
+<script src="data/explain.js?v=btl1"></script>
+<script src="route.js?v=btl1"></script>
+<script src="app.js?v=btl1"></script>
+</body>
+</html>
