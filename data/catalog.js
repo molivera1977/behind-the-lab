@@ -94,7 +94,10 @@ window.BTL_CATALOG = {
    "lessons": [
     "RC1",
     "RC2",
-    "RC3"
+    "RC3",
+    "RC4",
+    "RC5",
+    "RC6"
    ],
    "after": null
   },
@@ -1794,6 +1797,161 @@ window.BTL_CATALOG = {
     "why": "Paragraph 2 says Ruth held Grandpa's coat sleeve very tight. People hold on tight when they feel nervous. So that sentence shows Ruth is nervous."
    }
   },
+  "RC4": {
+   "id": "RC4",
+   "strand": "rc",
+   "order": 4,
+   "title": "Choose Two",
+   "icon": "✌️",
+   "goal": "pick the TWO answers that are both right",
+   "skill": "Character inference, Drawing conclusions, Character feelings, Theme",
+   "facts": false,
+   "check": false,
+   "reading": true,
+   "pre": true,
+   "parts": {
+    "pre": 3,
+    "watch": 3,
+    "step": 3,
+    "scored": 8
+   },
+   "points": 8,
+   "passPct": 75,
+   "need": 6,
+   "versions": 4,
+   "newTeach": true,
+   "types": [
+    "ms"
+   ],
+   "stories": {
+    "count": 16,
+    "fk": [
+     2,
+     2.8
+    ],
+    "words": [
+     124,
+     179
+    ],
+    "newTeachEveryTry": true
+   },
+   "sample": {
+    "type": "ms",
+    "q": "Which TWO sentences BEST describe Lyle? Choose TWO answers.",
+    "choices": [
+     "Lyle cares a lot about winning at first.",
+     "Lyle is willing to try a new way.",
+     "Lyle is the best mini golf player in his family.",
+     "Lyle never looks at the score card.",
+     "Lyle giggles and claps after every shot."
+    ],
+    "answer": "Lyle cares a lot about winning at first. / Lyle is willing to try a new way.",
+    "why": "Paragraph 1 shows Lyle add up the scores after every hole. Paragraph 2 shows him frown when Mom does well. He cares a lot about winning. Paragraph 5 shows Lyle almost say no. Then he turns and hits the ball backward. He is willing to try a new way."
+   }
+  },
+  "RC5": {
+   "id": "RC5",
+   "strand": "rc",
+   "order": 5,
+   "title": "Words That Mean More",
+   "icon": "🪄",
+   "goal": "figure out what an idiom or a simile really means",
+   "skill": "Figurative language",
+   "facts": false,
+   "check": false,
+   "reading": true,
+   "pre": true,
+   "parts": {
+    "pre": 3,
+    "watch": 3,
+    "step": 3,
+    "scored": 8
+   },
+   "points": 8,
+   "passPct": 75,
+   "need": 6,
+   "versions": 4,
+   "newTeach": true,
+   "types": [
+    "mc",
+    "ms"
+   ],
+   "stories": {
+    "count": 16,
+    "fk": [
+     1.9,
+     2.6
+    ],
+    "words": [
+     110,
+     194
+    ],
+    "newTeachEveryTry": true
+   },
+   "sample": {
+    "type": "mc",
+    "q": "Read this sentence from the passage. “On the first day, Rosie was all thumbs.” What does the phrase “all thumbs” suggest about Rosie?",
+    "choices": [
+     "Rosie had a hard time holding the cups.",
+     "Rosie had ten thumbs and no fingers.",
+     "Rosie's hands were quick and smooth.",
+     "Rosie's thumbs were sore from the cold gym."
+    ],
+    "answer": "Rosie had a hard time holding the cups.",
+    "why": "Paragraph 2 says Rosie's cups slipped out of her hands. Two of her towers fell over. So all thumbs means Rosie had a hard time holding the cups."
+   }
+  },
+  "RC6": {
+   "id": "RC6",
+   "strand": "rc",
+   "order": 6,
+   "title": "What Is It Mostly About?",
+   "icon": "🧭",
+   "goal": "tell what a paragraph or a story is mostly about",
+   "skill": "Main idea, Summary",
+   "facts": false,
+   "check": false,
+   "reading": true,
+   "pre": true,
+   "parts": {
+    "pre": 3,
+    "watch": 3,
+    "step": 3,
+    "scored": 8
+   },
+   "points": 8,
+   "passPct": 75,
+   "need": 6,
+   "versions": 4,
+   "newTeach": true,
+   "types": [
+    "mc"
+   ],
+   "stories": {
+    "count": 16,
+    "fk": [
+     1.9,
+     2.7
+    ],
+    "words": [
+     116,
+     205
+    ],
+    "newTeachEveryTry": true
+   },
+   "sample": {
+    "type": "mc",
+    "q": "Read paragraph 2. What is paragraph 2 mostly about?",
+    "choices": [
+     "At first, the maze is a lot of fun for Sid and Tam.",
+     "The narrow dirt paths twist and curve between the rows.",
+     "Dad keeps calling for Sid and Tam to wait.",
+     "Dad drives Sid and Tam out of the city to the maze."
+    ],
+    "answer": "At first, the maze is a lot of fun for Sid and Tam.",
+    "why": "Paragraph 2 starts, at first the maze was a lot of fun. The kids race and giggle. So paragraph 2 is mostly about the fun at the start."
+   }
+  },
   "RD1": {
    "id": "RD1",
    "strand": "rd",
@@ -1962,9 +2120,9 @@ window.BTL_CATALOG = {
    "id": "RD4",
    "strand": "rd",
    "order": 4,
-   "title": "Choose Two",
+   "title": "Choose Two: Level 2",
    "icon": "✌️",
-   "goal": "pick the TWO answers that are both right",
+   "goal": "pick the TWO answers that are both right, in a longer story",
    "skill": "Character inference, Drawing conclusions, Character feelings, Theme",
    "facts": false,
    "check": false,

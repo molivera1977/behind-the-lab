@@ -54,9 +54,9 @@ strands: {
   rc: {
     area: 'reading',
     level: 'Grade 4 test formats (RL.4.1) on easy stories: Flesch-Kincaid grade 1.8–2.8, so the format and the thinking are what is hard, not the words.',
-    why: 'Read Literary Texts IAB (10/20): 10 of 21 students Below. The class got 54% of one-answer questions but only 26% of Part A + Part B, 26% of click-the-sentences and 22% of choose-two. On the practice site, picking the sentence that PROVES an idea was missed 46% of the time.',
+    why: 'Read Literary Texts IAB (10/20): 10 of 21 students Below. The class got 54% of one-answer questions but only 26% of Part A + Part B, 26% of click-the-sentences and 22% of choose-two. On the practice site, picking the sentence that PROVES an idea was missed 46% of the time. Part 2 (RC4–RC6) is for the lowest items of all: the idiom item (19%) and the simile item (10%), and on the practice site main idea (missed 34%) and summary (31%).',
     who: 'Students Below on the Read Literary IAB, or with an mCLASS focus of vocabulary and comprehension. Everything is read aloud, and the passage must be heard to the end.',
-    decided: '10/20 — "build a comprehension strand"; 10/21 — on the plans of the Below readers.'
+    decided: '10/20 — "build a comprehension strand"; 10/21 — on the plans of the Below readers; 10/22 — Part 2 (Choose Two, Words That Mean More, What Is It Mostly About?).'
   },
   rd: {
     area: 'reading',
@@ -110,6 +110,9 @@ lessons: {
   RC1: { standard: 'RL.4.1', reviews: 'Finding the ONE sentence that proves an idea — and seeing that a sentence can be true but not proof.', level: 'Grade 4 format · stories FK 2–2.7' },
   RC2: { standard: 'RL.4.1, RL.4.3', reviews: 'Part A and Part B: answer the inference in Part A, then pick the sentence that proves it in Part B (the R.A.D. Detail).', level: 'Grade 4 format · stories FK 1.9–2.6' },
   RC3: { standard: 'RL.4.1', reviews: 'Clicking the sentence — then the TWO sentences — that show an idea; both must be right for the point, like the test.', level: 'Grade 4 format · stories FK 1.9–2.7' },
+  RC4: { standard: 'RL.4.1, RL.4.3', reviews: 'Choose TWO: two answers that are both right (what a character is like, a conclusion, a feeling, the lesson); all or nothing, like the test.', level: 'Grade 4 format · stories FK 2–2.8' },
+  RC5: { standard: 'L.4.5a, L.4.5b, RL.4.4', reviews: 'Idioms and similes: what a phrase really means, not word for word. One-answer, Choose TWO and one Choose THREE simile question per story.', level: 'Grade 4 format · stories FK 1.9–2.6' },
+  RC6: { standard: 'RL.4.2', reviews: 'What a paragraph is mostly about, the KEY event a summary leaves out (the summary is shown and read aloud), and the best summary.', level: 'Grade 4 format · stories FK 1.9–2.7' },
   RD1: { standard: 'RL.4.1', reviews: 'The sentence that BEST proves an idea in a longer story, when another sentence in the same paragraph is about the idea but does not prove it.', level: 'Grade 4 format · stories FK 3.9–4.9' },
   RD2: { standard: 'RL.4.1, RL.4.2, RL.4.3', reviews: 'Part A and Part B with harder Part A questions: a conclusion, a word that describes a character, the lesson of the story, a reason never stated.', level: 'Grade 4 format · stories FK 3.7–4.8' },
   RD3: { standard: 'RL.4.1', reviews: 'Clicking the TWO sentences that BEST show an idea, from 6-sentence lists and long paragraphs.', level: 'Grade 4 format · stories FK 4.1–4.9' },
