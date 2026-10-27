@@ -98,8 +98,10 @@ function build() {
       points, passPct: pct, need: Math.ceil(pct / 100 * points), versions: versions.length, newTeach, types, stories, sample
     };
   }));
+  // a one-paragraph lesson counts as passed once its full lesson is (the Lab's PARAGRAPH_OF, 10/26)
+  const paragraphOf = src.includes('const PARAGRAPH_OF = ') ? literal(src, 'PARAGRAPH_OF') : {};
   return { strands: STRANDS.map(st => ({ id: st.id, icon: st.icon, name: st.name, lessons: st.lessons.slice(), after: st.after || null })),
-    lessons, pass: { other: PASS, facts: FACTS } };
+    lessons, pass: { other: PASS, facts: FACTS }, paragraphOf };
 }
 
 function text(cat) {

@@ -92,11 +92,17 @@ window.BTL_CATALOG = {
    "icon": "🔎",
    "name": "Reading for Meaning",
    "lessons": [
+    "RP1",
     "RC1",
+    "RP2",
     "RC2",
+    "RP3",
     "RC3",
+    "RP4",
     "RC4",
+    "RP5",
     "RC5",
+    "RP6",
     "RC6"
    ],
    "after": null
@@ -1634,10 +1640,61 @@ window.BTL_CATALOG = {
     "why": "Count by hundred thousands: 900,000, 1,000,000. 915,800 is more than 900,000. It is less than 1,000,000. So it is between 900,000 and 1,000,000."
    }
   },
+  "RP1": {
+   "id": "RP1",
+   "strand": "rc",
+   "order": 1,
+   "title": "Find the Proof: One Paragraph",
+   "icon": "🔍",
+   "goal": "find the ONE sentence that proves an idea, in one paragraph",
+   "skill": "Evidence selection",
+   "facts": false,
+   "check": false,
+   "reading": true,
+   "pre": true,
+   "parts": {
+    "pre": 3,
+    "watch": 3,
+    "step": 2,
+    "scored": 8
+   },
+   "points": 8,
+   "passPct": 75,
+   "need": 6,
+   "versions": 4,
+   "newTeach": true,
+   "types": [
+    "mc"
+   ],
+   "stories": {
+    "count": 24,
+    "fk": [
+     1.8,
+     2.8
+    ],
+    "words": [
+     78,
+     104
+    ],
+    "newTeachEveryTry": true
+   },
+   "sample": {
+    "type": "mc",
+    "q": "Which sentence from the paragraph BEST shows that Jay has a smart idea?",
+    "choices": [
+     "\"Stand the couch up on its end and turn it!\" called Jay.",
+     "Jay studied the couch and the doorway for a long, long time.",
+     "At the top, the couch got stuck in the front doorway.",
+     "Dad and Uncle Ray carried it up the stairs to the third floor."
+    ],
+    "answer": "\"Stand the couch up on its end and turn it!\" called Jay.",
+    "why": "The paragraph says Jay called out a new way to move the couch. Stand it on its end and turn it. His plan works, so it is a smart idea."
+   }
+  },
   "RC1": {
    "id": "RC1",
    "strand": "rc",
-   "order": 1,
+   "order": 2,
    "title": "Find the Proof",
    "icon": "🔍",
    "goal": "find the ONE sentence that proves an idea",
@@ -1685,10 +1742,71 @@ window.BTL_CATALOG = {
     "why": "Paragraph 2 says Ezra's hands shook. Hands can shake when you are nervous."
    }
   },
+  "RP2": {
+   "id": "RP2",
+   "strand": "rc",
+   "order": 3,
+   "title": "Part A and Part B: One Paragraph",
+   "icon": "🅰️",
+   "goal": "answer Part A, then prove it in Part B, in one paragraph",
+   "skill": "Character inference, Supporting detail, Drawing conclusions, Character feelings",
+   "facts": false,
+   "check": false,
+   "reading": true,
+   "pre": true,
+   "parts": {
+    "pre": 2,
+    "watch": 3,
+    "step": 2,
+    "scored": 4
+   },
+   "points": 8,
+   "passPct": 75,
+   "need": 6,
+   "versions": 4,
+   "newTeach": true,
+   "types": [
+    "ebsr"
+   ],
+   "stories": {
+    "count": 24,
+    "fk": [
+     2,
+     2.8
+    ],
+    "words": [
+     77,
+     97
+    ],
+    "newTeachEveryTry": true
+   },
+   "sample": {
+    "type": "ebsr",
+    "q": "Part A — What can you infer about Nessa?",
+    "choices": [
+     "Nessa keeps trying, even when it is hard.",
+     "Nessa is afraid to climb up high.",
+     "Nessa would rather sit on the swings.",
+     "Nessa will be the best climber in her school."
+    ],
+    "answer": "Nessa keeps trying, even when it is hard.",
+    "b": {
+     "q": "Part B — Which sentence from the passage BEST supports the answer in Part A?",
+     "choices": [
+      "Her hands got red and sore, but she climbed right back up.",
+      "On Monday, she slipped and fell off at the third bar.",
+      "Her friend Ray sat on the swings and munched on his crackers.",
+      "She dropped into the wood chips and threw both arms up high."
+     ],
+     "answer": "Her hands got red and sore, but she climbed right back up."
+    },
+    "why": "Nessa falls, and her hands get sore. But she goes back up to try again. What I know: kids who do not give up keep going when it is hard. So Nessa keeps trying, even when it is hard."
+   }
+  },
   "RC2": {
    "id": "RC2",
    "strand": "rc",
-   "order": 2,
+   "order": 4,
    "title": "Part A and Part B",
    "icon": "🅰️",
    "goal": "answer Part A, then prove your answer in Part B",
@@ -1746,10 +1864,65 @@ window.BTL_CATALOG = {
     "why": "Paragraph 2 and paragraph 5 give clues. Jules keeps asking questions, and he writes down a lot. People who want to know how things work do that. So Jules is curious."
    }
   },
+  "RP3": {
+   "id": "RP3",
+   "strand": "rc",
+   "order": 5,
+   "title": "Click the Sentences: One Paragraph",
+   "icon": "👆",
+   "goal": "click the sentences that show an idea, in one paragraph",
+   "skill": "Evidence selection",
+   "facts": false,
+   "check": false,
+   "reading": true,
+   "pre": true,
+   "parts": {
+    "pre": 2,
+    "watch": 3,
+    "step": 2,
+    "scored": 8
+   },
+   "points": 8,
+   "passPct": 75,
+   "need": 6,
+   "versions": 4,
+   "newTeach": true,
+   "types": [
+    "hot"
+   ],
+   "stories": {
+    "count": 24,
+    "fk": [
+     2,
+     2.7
+    ],
+    "words": [
+     76,
+     97
+    ],
+    "newTeachEveryTry": true
+   },
+   "sample": {
+    "type": "hot",
+    "q": "Look at the end. How does Mrs. Okafor feel? Click on the sentence from the paragraph that BEST shows that Mrs. Okafor is HAPPY.",
+    "choices": [
+     "Mrs. Okafor got a new tablet from her grandson in Texas.",
+     "She knocked on Joss's door with the tablet in her hands.",
+     "She could not get the video call to work.",
+     "Joss showed her which green button to press.",
+     "Mrs. Okafor pressed the wrong one, so Joss showed her again.",
+     "He went over each step slowly, three times, until she got it.",
+     "Then her grandson's face popped up on the screen.",
+     "Mrs. Okafor clapped her hands and laughed out loud."
+    ],
+    "answer": "Mrs. Okafor clapped her hands and laughed out loud.",
+    "why": "The paragraph says Mrs. Okafor clapped and laughed out loud. People clap and laugh when they are happy. That shows she is happy."
+   }
+  },
   "RC3": {
    "id": "RC3",
    "strand": "rc",
-   "order": 3,
+   "order": 6,
    "title": "Click the Sentences",
    "icon": "👆",
    "goal": "click the sentences that show an idea",
@@ -1797,10 +1970,62 @@ window.BTL_CATALOG = {
     "why": "Paragraph 2 says Ruth held Grandpa's coat sleeve very tight. People hold on tight when they feel nervous. So that sentence shows Ruth is nervous."
    }
   },
+  "RP4": {
+   "id": "RP4",
+   "strand": "rc",
+   "order": 7,
+   "title": "Choose Two: One Paragraph",
+   "icon": "✌️",
+   "goal": "pick the TWO answers that are both right, in one paragraph",
+   "skill": "Character inference, Character feelings, Drawing conclusions, Theme",
+   "facts": false,
+   "check": false,
+   "reading": true,
+   "pre": true,
+   "parts": {
+    "pre": 3,
+    "watch": 3,
+    "step": 2,
+    "scored": 8
+   },
+   "points": 8,
+   "passPct": 75,
+   "need": 6,
+   "versions": 4,
+   "newTeach": true,
+   "types": [
+    "ms"
+   ],
+   "stories": {
+    "count": 24,
+    "fk": [
+     2.1,
+     2.8
+    ],
+    "words": [
+     79,
+     107
+    ],
+    "newTeachEveryTry": true
+   },
+   "sample": {
+    "type": "ms",
+    "q": "Which TWO sentences BEST describe Lena? Choose TWO answers.",
+    "choices": [
+     "Lena is brave enough to try a scary jump.",
+     "Lena is careful before she jumps.",
+     "Lena wants to work at the trampoline park someday.",
+     "Lena flaps her arms like a bird.",
+     "Lena jumps without looking first."
+    ],
+    "answer": "Lena is brave enough to try a scary jump. / Lena is careful before she jumps.",
+    "why": "The paragraph shows Lena grip the rail with both hands. The jump scares her, but she lets go and jumps. She is brave. The paragraph also shows Lena wait until the trampoline is clear. She is careful."
+   }
+  },
   "RC4": {
    "id": "RC4",
    "strand": "rc",
-   "order": 4,
+   "order": 8,
    "title": "Choose Two",
    "icon": "✌️",
    "goal": "pick the TWO answers that are both right",
@@ -1849,10 +2074,61 @@ window.BTL_CATALOG = {
     "why": "Paragraph 1 shows Lyle add up the scores after every hole. Paragraph 2 shows him frown when Mom does well. He cares a lot about winning. Paragraph 5 shows Lyle almost say no. Then he turns and hits the ball backward. He is willing to try a new way."
    }
   },
+  "RP5": {
+   "id": "RP5",
+   "strand": "rc",
+   "order": 9,
+   "title": "Words That Mean More: One Paragraph",
+   "icon": "🪄",
+   "goal": "figure out what an idiom or a simile means, in one paragraph",
+   "skill": "Figurative language",
+   "facts": false,
+   "check": false,
+   "reading": true,
+   "pre": true,
+   "parts": {
+    "pre": 2,
+    "watch": 3,
+    "step": 2,
+    "scored": 8
+   },
+   "points": 8,
+   "passPct": 75,
+   "need": 6,
+   "versions": 4,
+   "newTeach": true,
+   "types": [
+    "mc"
+   ],
+   "stories": {
+    "count": 24,
+    "fk": [
+     1.8,
+     2.8
+    ],
+    "words": [
+     65,
+     95
+    ],
+    "newTeachEveryTry": true
+   },
+   "sample": {
+    "type": "mc",
+    "q": "Read this sentence from the paragraph. “She said the coast was clear.” What does the phrase “the coast was clear” suggest about the yard?",
+    "choices": [
+     "The skunk was gone from the yard.",
+     "The yard was right by the sea.",
+     "The skunk was still by the steps.",
+     "The yard was full of mud and puddles."
+    ],
+    "answer": "The skunk was gone from the yard.",
+    "why": "The paragraph says the skunk waddled away under the fence. Then Mom looked all around the yard. So the coast was clear means the skunk was gone, and it was safe to go out."
+   }
+  },
   "RC5": {
    "id": "RC5",
    "strand": "rc",
-   "order": 5,
+   "order": 10,
    "title": "Words That Mean More",
    "icon": "🪄",
    "goal": "figure out what an idiom or a simile really means",
@@ -1901,10 +2177,61 @@ window.BTL_CATALOG = {
     "why": "Paragraph 2 says Rosie's cups slipped out of her hands. Two of her towers fell over. So all thumbs means Rosie had a hard time holding the cups."
    }
   },
+  "RP6": {
+   "id": "RP6",
+   "strand": "rc",
+   "order": 11,
+   "title": "Mostly About: One Paragraph",
+   "icon": "🧭",
+   "goal": "tell what one paragraph is mostly about",
+   "skill": "Main idea, Summary",
+   "facts": false,
+   "check": false,
+   "reading": true,
+   "pre": true,
+   "parts": {
+    "pre": 2,
+    "watch": 3,
+    "step": 2,
+    "scored": 8
+   },
+   "points": 8,
+   "passPct": 75,
+   "need": 6,
+   "versions": 4,
+   "newTeach": true,
+   "types": [
+    "mc"
+   ],
+   "stories": {
+    "count": 24,
+    "fk": [
+     1.8,
+     2.7
+    ],
+    "words": [
+     69,
+     95
+    ],
+    "newTeachEveryTry": true
+   },
+   "sample": {
+    "type": "mc",
+    "q": "What is the paragraph mostly about? Think of the whole thing. Do not pick just one small part.",
+    "choices": [
+     "Hana takes her first plane trip to visit Grandpa.",
+     "Hana presses her nose to the window and sees tiny cars.",
+     "Hana buckles her seat belt and holds on tight.",
+     "Hana and Mom fly to see Grandpa every summer."
+    ],
+    "answer": "Hana takes her first plane trip to visit Grandpa.",
+    "why": "Every sentence is about Hana's first plane trip to see Grandpa. That is the main idea."
+   }
+  },
   "RC6": {
    "id": "RC6",
    "strand": "rc",
-   "order": 6,
+   "order": 12,
    "title": "What Is It Mostly About?",
    "icon": "🧭",
    "goal": "tell what a paragraph or a story is mostly about",
@@ -2172,5 +2499,13 @@ window.BTL_CATALOG = {
  "pass": {
   "other": 75,
   "facts": 90
+ },
+ "paragraphOf": {
+  "RP1": "RC1",
+  "RP2": "RC2",
+  "RP3": "RC3",
+  "RP4": "RC4",
+  "RP5": "RC5",
+  "RP6": "RC6"
  }
 };

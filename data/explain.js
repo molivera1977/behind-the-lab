@@ -56,7 +56,7 @@ strands: {
     level: 'Grade 4 test formats (RL.4.1) on easy stories: Flesch-Kincaid grade 1.8–2.8, so the format and the thinking are what is hard, not the words.',
     why: 'Read Literary Texts IAB (10/20): 10 of 21 students Below. The class got 54% of one-answer questions but only 26% of Part A + Part B, 26% of click-the-sentences and 22% of choose-two. On the practice site, picking the sentence that PROVES an idea was missed 46% of the time. Part 2 (RC4–RC6) is for the lowest items of all: the idiom item (19%) and the simile item (10%), and on the practice site main idea (missed 34%) and summary (31%).',
     who: 'Students Below on the Read Literary IAB, or with an mCLASS focus of vocabulary and comprehension. Everything is read aloud, and the passage must be heard to the end.',
-    decided: '10/20 — "build a comprehension strand"; 10/21 — on the plans of the Below readers; 10/22 — Part 2 (Choose Two, Words That Mean More, What Is It Mostly About?).'
+    decided: '10/20 — "build a comprehension strand"; 10/21 — on the plans of the Below readers; 10/22 — Part 2 (Choose Two, Words That Mean More, What Is It Mostly About?); 10/26 — a one-paragraph lesson right before each skill ("a shorter exercise with just a paragraph to read from would practice the skill prior to throwing them into a 5 paragraph long story"), after the first full day: 7 of 12 full reading lessons passed, and 16 of the 27 misses were find-the-proof questions.'
   },
   rd: {
     area: 'reading',
@@ -107,6 +107,12 @@ lessons: {
   BR3: { standard: '4.NBT.A.3', reviews: 'Rounding to any place the question names (hundred to hundred thousand).', level: 'Grade 4' },
   BR4: { standard: '4.NBT.A.3', reviews: '"Which number rounds to it?": rounding each choice to find the one that rounds to the target (FIAB item 9, turned around).', level: 'Grade 4' },
   BR5: { standard: '4.NBT.A.3', reviews: 'A 20-question big-rounding check with no hints. Passing it finishes the strand.', level: 'Grade 4' },
+  RP1: { standard: 'RL.4.1', reviews: 'Finding the ONE sentence that proves an idea, practiced on one paragraph at a time before the full-length Find the Proof.', level: 'Grade 4 format · one-paragraph stories, FK 1.8–2.8' },
+  RP2: { standard: 'RL.4.1, RL.4.3', reviews: 'Part A and Part B on one paragraph at a time: the inference, then the sentence that proves it.', level: 'Grade 4 format · one-paragraph stories, FK 1.8–2.8' },
+  RP3: { standard: 'RL.4.1', reviews: 'Clicking the sentence, then the TWO sentences, that show an idea — inside one paragraph.', level: 'Grade 4 format · one-paragraph stories, FK 1.8–2.8' },
+  RP4: { standard: 'RL.4.1, RL.4.3', reviews: 'Choose TWO on one paragraph at a time: two answers that are both right; all or nothing, like the test.', level: 'Grade 4 format · one-paragraph stories, FK 1.8–2.8' },
+  RP5: { standard: 'L.4.5a, L.4.5b, RL.4.4', reviews: 'One idiom and one simile in each paragraph: what the phrase really means, not word for word.', level: 'Grade 4 format · one-paragraph stories, FK 1.8–2.8' },
+  RP6: { standard: 'RL.4.2', reviews: 'What one paragraph is mostly about, its best summary, and the KEY event a summary leaves out.', level: 'Grade 4 format · one-paragraph stories, FK 1.8–2.8' },
   RC1: { standard: 'RL.4.1', reviews: 'Finding the ONE sentence that proves an idea — and seeing that a sentence can be true but not proof.', level: 'Grade 4 format · stories FK 2–2.7' },
   RC2: { standard: 'RL.4.1, RL.4.3', reviews: 'Part A and Part B: answer the inference in Part A, then pick the sentence that proves it in Part B (the R.A.D. Detail).', level: 'Grade 4 format · stories FK 1.9–2.6' },
   RC3: { standard: 'RL.4.1', reviews: 'Clicking the sentence — then the TWO sentences — that show an idea; both must be right for the point, like the test.', level: 'Grade 4 format · stories FK 1.9–2.7' },

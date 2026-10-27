@@ -8,6 +8,7 @@
      - math and reading TAKE TURNS (10/20): after a math lesson, reading; after reading, math; with nothing done
        yet, the plan row's first strand
      - a missed lesson is still not passed, so it comes back on its turn
+     - each skill's one-paragraph lesson comes right before its full lesson, and passing the full lesson counts for it (10/26)
 ═══════════════════════════════════════════════════════ */
 (function (root) {
 'use strict';
@@ -39,6 +40,8 @@ function make(catalog) {
   /* one child: plan = strand ids in plan order; passedSet = lessons passed; last = the last lesson finished (or null) */
   function child(plan, passedSet, last) {
     const passed = new Set(passedSet);
+    // a one-paragraph lesson counts as passed once its full lesson is (the Lab's PARAGRAPH_OF: RP1 → RC1, 10/26)
+    Object.entries(catalog.paragraphOf || {}).forEach(([p, full]) => { if (passed.has(full)) passed.add(p); });
     const strands = plan.map(id => S.find(st => st.id === id)).filter(Boolean);
     const strandPassed = sid => { const st = S.find(x => x.id === sid); return !!st && st.lessons.every(id => passed.has(id)); };
     function wait(id) {
