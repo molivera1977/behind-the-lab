@@ -62,8 +62,15 @@ strands: {
     area: 'reading',
     level: 'The same Grade 4 test formats on grade 4–5 stories (Flesch-Kincaid 4.0–5.0, up to 450 words), with wrong choices that are close to right.',
     why: 'For the middle and top readers. On the Read Literary IAB, the 8 students it was built for got 73% of the one-answer items but only 43% of the Part A + Part B, choose-two and click-the-sentences items — so the format is their gap, at their reading level.',
-    who: 'At/Near or Above on the Read Literary IAB, with a multi-part score well below their one-answer score. Level 1 students get Level 2 after they finish Level 1 (it waits for Level 1 when both are on a plan).',
-    decided: '10/22 — Reading for Meaning: Level 2.'
+    who: 'At/Near or Above on the Read Literary IAB, with a multi-part score well below their one-answer score. Level 1 students get it after Level 1 and the middle level (it waits for each of them that is on the plan).',
+    decided: '10/22 — Reading for Meaning: Level 2; 10/26 — renamed Level 3 when the middle level became Level 2 ("Should we just relabel Level 2 as Level 3").'
+  },
+  rm: {
+    area: 'reading',
+    level: 'The same Grade 4 test formats and close wrong choices as Level 3, on medium stories: Flesch-Kincaid 2.8–3.8, 180–280 words (Level 1: 1.8–2.8 and 100–210; Level 3: 4.0–5.0 and 280–400).',
+    why: 'Mr. Olivera 10/26: "having more of a transition from level 1 to 2 is needed." On the first full day, the two students who missed Find the Proof at the old Level 2 (5 of 8 each) picked "true but not proof" sentences — the close trap — on stories of 280–400 words. This level keeps the trap and halves the reading load.',
+    who: 'Everyone headed to Level 3: Level 1 students after Level 1, and the students who started at the old Level 2. Passing a Level 3 lesson counts for its Level 2 lesson, so no one who already passed is sent back.',
+    decided: '10/26 — the middle level ("Everyone headed to Level 2"; the old Level 2 is now Level 3).'
   }
 },
 
@@ -119,6 +126,10 @@ lessons: {
   RC4: { standard: 'RL.4.1, RL.4.3', reviews: 'Choose TWO: two answers that are both right (what a character is like, a conclusion, a feeling, the lesson); all or nothing, like the test.', level: 'Grade 4 format · stories FK 2–2.8' },
   RC5: { standard: 'L.4.5a, L.4.5b, RL.4.4', reviews: 'Idioms and similes: what a phrase really means, not word for word. One-answer, Choose TWO and one Choose THREE simile question per story.', level: 'Grade 4 format · stories FK 1.9–2.6' },
   RC6: { standard: 'RL.4.2', reviews: 'What a paragraph is mostly about, the KEY event a summary leaves out (the summary is shown and read aloud), and the best summary.', level: 'Grade 4 format · stories FK 1.9–2.7' },
+  RM1: { standard: 'RL.4.1', reviews: 'Find the Proof on a medium story: the sentence that BEST proves an idea, with a close sentence in the same paragraph that does not.', level: 'Grade 4 format · stories FK 2.8–3.8' },
+  RM2: { standard: 'RL.4.1, RL.4.2, RL.4.3', reviews: 'Part A and Part B on medium stories, with a partly-right Part A choice and a close Part B sentence.', level: 'Grade 4 format · stories FK 2.8–3.8' },
+  RM3: { standard: 'RL.4.1', reviews: 'Clicking the TWO sentences that BEST show an idea, from 6-sentence lists and longer paragraphs, on medium stories.', level: 'Grade 4 format · stories FK 2.8–3.8' },
+  RM4: { standard: 'RL.4.1, RL.4.2, RL.4.3', reviews: 'Choose TWO on medium stories: two answers that are both right, with a partly-right choice to rule out; all or nothing.', level: 'Grade 4 format · stories FK 2.8–3.8' },
   RD1: { standard: 'RL.4.1', reviews: 'The sentence that BEST proves an idea in a longer story, when another sentence in the same paragraph is about the idea but does not prove it.', level: 'Grade 4 format · stories FK 3.9–4.9' },
   RD2: { standard: 'RL.4.1, RL.4.2, RL.4.3', reviews: 'Part A and Part B with harder Part A questions: a conclusion, a word that describes a character, the lesson of the story, a reason never stated.', level: 'Grade 4 format · stories FK 3.7–4.8' },
   RD3: { standard: 'RL.4.1', reviews: 'Clicking the TWO sentences that BEST show an idea, from 6-sentence lists and long paragraphs.', level: 'Grade 4 format · stories FK 4.1–4.9' },

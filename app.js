@@ -20,6 +20,8 @@ const AREA_NAME = { facts: 'Math facts', number: 'Number sense', reading: 'Readi
 const $ = s => document.querySelector(s);
 const esc = s => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const strand = id => C.strands.find(s => s.id === id);
+// the strand(s) a strand waits for, by name (10/26: Level 3 waits for Level 1 and Level 2 — "after" can be a list)
+const afterName = st => [].concat(st.after || []).map(strand).filter(Boolean).map(x => x.name).join(' and ');
 const areaOf = st => (E.strands[st.id] || {}).area || 'number';
 const allLessons = C.strands.flatMap(s => s.lessons);
 
@@ -37,7 +39,7 @@ const TOPICS = {
   'step-watch': ['👀 Watch', [
     'A worked example, one idea per screen, with the same picture or story the questions use.',
     'It is read aloud and must be heard to the end before Next appears.',
-    'In Adding and Subtracting, Big Numbers and Reading Level 2, a retry brings a NEW worked example, taught the same way (Mr. Olivera 10/21: "one method, new numbers"). In the other lessons the worked example repeats and the questions are new. Each lesson\'s page says which.']],
+    'In Adding and Subtracting, Big Numbers and most reading lessons (Level 1 from Choose Two on, the one-paragraph lessons, Levels 2 and 3), a retry brings a NEW worked example, taught the same way (Mr. Olivera 10/21: "one method, new numbers"). In the other lessons the worked example repeats and the questions are new. Each lesson\'s page says which.']],
   'step-mine': ['⭐ One you missed before', [
     'On the first try, the child sees one of their OWN past mistakes from the class sites, worked out: the question, what they picked, the right answer and why.',
     'In reading, it comes from their own Read Literary practice misses.']],
@@ -129,9 +131,9 @@ function lessonHTML(id) {
     <h4>Who gets it</h4><p>${esc(se.who || '')}</p>`;
 }
 function strandHTML(id) {
-  const st = strand(id), se = E.strands[id] || {}, after = st.after && strand(st.after);
+  const st = strand(id), se = E.strands[id] || {}, after = afterName(st);
   return `<h2 id="drawer-title">${esc(st.icon)} ${esc(st.name)}</h2>
-    <p class="muted">${esc(AREA_NAME[se.area] || '')} · ${st.lessons.length} lessons${after ? ` · opens after ${esc(after.name)} when both are on a plan` : ''}</p>
+    <p class="muted">${esc(AREA_NAME[se.area] || '')} · ${st.lessons.length} lessons${after ? ` · opens after ${esc(after)} when they are on a plan` : ''}</p>
     <dl class="facts-list"><dt>Level</dt><dd>${esc(se.level)}</dd><dt>Why</dt><dd>${esc(se.why)}</dd><dt>Who gets it</dt><dd>${esc(se.who)}</dd><dt>Decided</dt><dd>${esc(se.decided || '')}</dd></dl>
     <h4>The lessons</h4><ol>${st.lessons.map(l => `<li><button class="more" data-lesson="${l}">${esc(C.lessons[l].title)}</button></li>`).join('')}</ol>`;
 }
@@ -140,11 +142,11 @@ function strandHTML(id) {
 function renderMap() {
   $('#n-lessons').textContent = String(allLessons.length);
   $('#map').innerHTML = C.strands.map(st => {
-    const after = st.after && strand(st.after);
+    const after = afterName(st);
     return `<section class="lane ${areaOf(st)}" aria-label="${esc(st.name)}">
       <div class="lane-head"><h3>${esc(st.icon)} ${esc(st.name)}</h3>
         <button class="more" data-strand="${st.id}">Why this strand</button>
-        ${after ? `<span class="gate">🔒 opens after ${esc(after.name)} (when both are on a plan)</span>` : ''}</div>
+        ${after ? `<span class="gate">🔒 opens after ${esc(after)} (when they are on a plan)</span>` : ''}</div>
       <div class="tiles">${st.lessons.map((id, i) => `${i ? '<span class="arrow" aria-hidden="true">→</span>' : ''}<button class="tile" data-lesson="${id}" id="tile-${id}"><span class="code">${id}</span><span class="t">${esc(C.lessons[id].icon)} ${esc(C.lessons[id].title)}</span></button>`).join('')}</div>
     </section>`;
   }).join('');
@@ -153,10 +155,10 @@ function renderMap() {
 /* ── Who gets what ── */
 function renderWho() {
   $('#who').innerHTML = C.strands.map(st => {
-    const se = E.strands[st.id] || {}, after = st.after && strand(st.after);
+    const se = E.strands[st.id] || {}, after = afterName(st);
     return `<article class="card who-card ${areaOf(st)}"><h3>${esc(st.icon)} ${esc(st.name)}</h3>
       <dl><dt>Who gets it</dt><dd>${esc(se.who)}</dd><dt>Why</dt><dd>${esc(se.why)}</dd><dt>Level</dt><dd>${esc(se.level)}</dd>
-      ${after ? `<dt>Order</dt><dd>Opens after ${esc(after.name)} when both are on the plan.</dd>` : ''}<dt>Decided</dt><dd>${esc(se.decided || '')}</dd></dl>
+      ${after ? `<dt>Order</dt><dd>Opens after ${esc(after)} when they are on the plan.</dd>` : ''}<dt>Decided</dt><dd>${esc(se.decided || '')}</dd></dl>
       <p><button class="more" data-strand="${st.id}">See its ${st.lessons.length} lessons</button></p></article>`;
   }).join('');
 }

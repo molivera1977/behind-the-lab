@@ -98,10 +98,10 @@ function build() {
       points, passPct: pct, need: Math.ceil(pct / 100 * points), versions: versions.length, newTeach, types, stories, sample
     };
   }));
-  // a one-paragraph lesson counts as passed once its full lesson is (the Lab's PARAGRAPH_OF, 10/26)
-  const paragraphOf = src.includes('const PARAGRAPH_OF = ') ? literal(src, 'PARAGRAPH_OF') : {};
+  // a lesson that counts as passed once its harder lesson is (the Lab's PASSED_WITH, 10/26): RP → RC, RM → RD
+  const passedWith = src.includes('const PASSED_WITH = ') ? literal(src, 'PASSED_WITH') : {};
   return { strands: STRANDS.map(st => ({ id: st.id, icon: st.icon, name: st.name, lessons: st.lessons.slice(), after: st.after || null })),
-    lessons, pass: { other: PASS, facts: FACTS }, paragraphOf };
+    lessons, pass: { other: PASS, facts: FACTS }, passedWith };
 }
 
 function text(cat) {

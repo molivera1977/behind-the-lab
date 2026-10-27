@@ -108,16 +108,31 @@ window.BTL_CATALOG = {
    "after": null
   },
   {
+   "id": "rm",
+   "icon": "🪜",
+   "name": "Reading for Meaning: Level 2",
+   "lessons": [
+    "RM1",
+    "RM2",
+    "RM3",
+    "RM4"
+   ],
+   "after": "rc"
+  },
+  {
    "id": "rd",
    "icon": "🔭",
-   "name": "Reading for Meaning: Level 2",
+   "name": "Reading for Meaning: Level 3",
    "lessons": [
     "RD1",
     "RD2",
     "RD3",
     "RD4"
    ],
-   "after": "rc"
+   "after": [
+    "rc",
+    "rm"
+   ]
   }
  ],
  "lessons": {
@@ -2279,11 +2294,227 @@ window.BTL_CATALOG = {
     "why": "Paragraph 2 starts, at first the maze was a lot of fun. The kids race and giggle. So paragraph 2 is mostly about the fun at the start."
    }
   },
+  "RM1": {
+   "id": "RM1",
+   "strand": "rm",
+   "order": 1,
+   "title": "Find the Proof: Level 2",
+   "icon": "🔍",
+   "goal": "find the sentence that BEST proves an idea in a medium story",
+   "skill": "Evidence selection",
+   "facts": false,
+   "check": false,
+   "reading": true,
+   "pre": true,
+   "parts": {
+    "pre": 3,
+    "watch": 3,
+    "step": 3,
+    "scored": 8
+   },
+   "points": 8,
+   "passPct": 75,
+   "need": 6,
+   "versions": 4,
+   "newTeach": true,
+   "types": [
+    "mc"
+   ],
+   "stories": {
+    "count": 16,
+    "fk": [
+     2.9,
+     3.7
+    ],
+    "words": [
+     172,
+     278
+    ],
+    "newTeachEveryTry": true
+   },
+   "sample": {
+    "type": "mc",
+    "q": "Which sentence from the passage BEST shows how Greer feels about feeding the calf at first?",
+    "choices": [
+     "Greer swallowed hard, and her hands shook as she climbed into the pen.",
+     "The bottle was as long as Greer's arm, and it was heavy.",
+     "Her cousin Ward leaned on the gate and rolled his eyes.",
+     "Aunt Rhoda said that feeding Pudding would be Greer's job."
+    ],
+    "answer": "Greer swallowed hard, and her hands shook as she climbed into the pen.",
+    "why": "Paragraph 2 says Greer swallowed hard, and her hands shook. People do that when they feel nervous."
+   }
+  },
+  "RM2": {
+   "id": "RM2",
+   "strand": "rm",
+   "order": 2,
+   "title": "Part A and Part B: Level 2",
+   "icon": "🅰️",
+   "goal": "answer Part A, then prove it in Part B, in a medium story",
+   "skill": "Drawing conclusions, Supporting detail, Character inference, Theme",
+   "facts": false,
+   "check": false,
+   "reading": true,
+   "pre": true,
+   "parts": {
+    "pre": 2,
+    "watch": 3,
+    "step": 3,
+    "scored": 4
+   },
+   "points": 8,
+   "passPct": 75,
+   "need": 6,
+   "versions": 4,
+   "newTeach": true,
+   "types": [
+    "ebsr"
+   ],
+   "stories": {
+    "count": 16,
+    "fk": [
+     2.9,
+     3.7
+    ],
+    "words": [
+     171,
+     242
+    ],
+    "newTeachEveryTry": true
+   },
+   "sample": {
+    "type": "ebsr",
+    "q": "Part A — What conclusion can the reader draw about Grandma Lu?",
+    "choices": [
+     "Grandma Lu wanted Inga to do the sewing by herself.",
+     "Grandma Lu never helped Inga with any part of the pillow.",
+     "Grandma Lu thought Inga was too young to run the machine.",
+     "Grandma Lu wanted to keep the soccer jersey for herself."
+    ],
+    "answer": "Grandma Lu wanted Inga to do the sewing by herself.",
+    "b": {
+     "q": "Part B — Which sentence from the passage BEST supports the answer in Part A?",
+     "choices": [
+      "She slid the sewing machine over to Inga’s side and folded her hands in her lap.",
+      "At the table, Grandma Lu pulled out a chair and sat down.",
+      "Grandma Lu kept an old sewing machine on a table by the window.",
+      "Grandma Lu called to ask if Inga had any more old shirts."
+     ],
+     "answer": "She slid the sewing machine over to Inga’s side and folded her hands in her lap."
+    },
+    "why": "Paragraph 3 gives clues. Grandma Lu sits down and gives the machine to Inga. Then Grandma Lu keeps her own hands still. The clues add up. Grandma Lu wanted Inga to do the sewing by herself."
+   }
+  },
+  "RM3": {
+   "id": "RM3",
+   "strand": "rm",
+   "order": 3,
+   "title": "Click the Sentences: Level 2",
+   "icon": "👆",
+   "goal": "click the sentences that BEST show an idea in a medium story",
+   "skill": "Evidence selection",
+   "facts": false,
+   "check": false,
+   "reading": true,
+   "pre": true,
+   "parts": {
+    "pre": 3,
+    "watch": 3,
+    "step": 2,
+    "scored": 8
+   },
+   "points": 8,
+   "passPct": 75,
+   "need": 6,
+   "versions": 4,
+   "newTeach": true,
+   "types": [
+    "hot"
+   ],
+   "stories": {
+    "count": 16,
+    "fk": [
+     2.7,
+     3.8
+    ],
+    "words": [
+     167,
+     320
+    ],
+    "newTeachEveryTry": true
+   },
+   "sample": {
+    "type": "hot",
+    "q": "Read paragraph 2. Curious means you want to find out about things. Click on the sentence in paragraph 2 that BEST shows that Hollis is CURIOUS.",
+    "choices": [
+     "Ms. Kwan led the class down a long hall covered with music posters.",
+     "Hollis held the heavy door for the kids at the back of the line.",
+     "A few kids stopped to stare at a poster of a famous drummer.",
+     "Hollis asked Ms. Kwan how the music got from the station to his mom's car.",
+     "Ms. Kwan pointed up and said that a tall tower on the roof sent it out."
+    ],
+    "answer": "Hollis asked Ms. Kwan how the music got from the station to his mom's car.",
+    "why": "Paragraph 2 says Hollis asked Ms. Kwan how the music got to his mom's car. He wanted to find out how radio works. That shows Hollis is curious."
+   }
+  },
+  "RM4": {
+   "id": "RM4",
+   "strand": "rm",
+   "order": 4,
+   "title": "Choose Two: Level 2",
+   "icon": "✌️",
+   "goal": "pick the TWO answers that are both right, in a medium story",
+   "skill": "Character inference, Drawing conclusions, Character feelings, Theme",
+   "facts": false,
+   "check": false,
+   "reading": true,
+   "pre": true,
+   "parts": {
+    "pre": 3,
+    "watch": 3,
+    "step": 3,
+    "scored": 8
+   },
+   "points": 8,
+   "passPct": 75,
+   "need": 6,
+   "versions": 4,
+   "newTeach": true,
+   "types": [
+    "ms"
+   ],
+   "stories": {
+    "count": 16,
+    "fk": [
+     2.9,
+     3.6
+    ],
+    "words": [
+     207,
+     278
+    ],
+    "newTeachEveryTry": true
+   },
+   "sample": {
+    "type": "ms",
+    "q": "Which TWO sentences BEST describe Marisol? Choose TWO answers.",
+    "choices": [
+     "Marisol takes good care of her stickers.",
+     "Marisol tells the truth, even when it costs her something.",
+     "Marisol has the biggest sticker collection in her school.",
+     "Marisol keeps the dragon after she says the trade was unfair.",
+     "Marisol came home from a party with a gold dragon."
+    ],
+    "answer": "Marisol takes good care of her stickers. / Marisol tells the truth, even when it costs her something.",
+    "why": "Paragraph 1 shows Marisol look at every page each night. She presses down the curled corners. She takes good care of her stickers. Paragraph 5 shows Marisol tell Dash that the dragon is worth more. Then she gives it back. She tells the truth, even though she loses the dragon."
+   }
+  },
   "RD1": {
    "id": "RD1",
    "strand": "rd",
    "order": 1,
-   "title": "Find the Proof: Level 2",
+   "title": "Find the Proof: Level 3",
    "icon": "🔍",
    "goal": "find the sentence that BEST proves an idea in a longer story",
    "skill": "Evidence selection",
@@ -2334,7 +2565,7 @@ window.BTL_CATALOG = {
    "id": "RD2",
    "strand": "rd",
    "order": 2,
-   "title": "Part A and Part B: Level 2",
+   "title": "Part A and Part B: Level 3",
    "icon": "🅰️",
    "goal": "answer Part A, then prove it in Part B, in a longer story",
    "skill": "Drawing conclusions, Supporting detail, Character inference, Theme",
@@ -2395,7 +2626,7 @@ window.BTL_CATALOG = {
    "id": "RD3",
    "strand": "rd",
    "order": 3,
-   "title": "Click the Sentences: Level 2",
+   "title": "Click the Sentences: Level 3",
    "icon": "👆",
    "goal": "click the sentences that BEST show an idea in a longer story",
    "skill": "Evidence selection",
@@ -2447,7 +2678,7 @@ window.BTL_CATALOG = {
    "id": "RD4",
    "strand": "rd",
    "order": 4,
-   "title": "Choose Two: Level 2",
+   "title": "Choose Two: Level 3",
    "icon": "✌️",
    "goal": "pick the TWO answers that are both right, in a longer story",
    "skill": "Character inference, Drawing conclusions, Character feelings, Theme",
@@ -2500,12 +2731,16 @@ window.BTL_CATALOG = {
   "other": 75,
   "facts": 90
  },
- "paragraphOf": {
+ "passedWith": {
   "RP1": "RC1",
   "RP2": "RC2",
   "RP3": "RC3",
   "RP4": "RC4",
   "RP5": "RC5",
-  "RP6": "RC6"
+  "RP6": "RC6",
+  "RM1": "RD1",
+  "RM2": "RD2",
+  "RM3": "RD3",
+  "RM4": "RD4"
  }
 };

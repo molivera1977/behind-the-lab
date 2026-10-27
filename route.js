@@ -41,14 +41,16 @@ function make(catalog) {
   function child(plan, passedSet, last) {
     const passed = new Set(passedSet);
     // a one-paragraph lesson counts as passed once its full lesson is (the Lab's PARAGRAPH_OF: RP1 → RC1, 10/26)
-    Object.entries(catalog.paragraphOf || {}).forEach(([p, full]) => { if (passed.has(full)) passed.add(p); });
+    // (and a Level 2 lesson once its Level 3 lesson is: the Lab's PASSED_WITH)
+    Object.entries(catalog.passedWith || {}).forEach(([p, full]) => { if (passed.has(full)) passed.add(p); });
     const strands = plan.map(id => S.find(st => st.id === id)).filter(Boolean);
     const strandPassed = sid => { const st = S.find(x => x.id === sid); return !!st && st.lessons.every(id => passed.has(id)); };
     function wait(id) {
       const st = strandOf(id);
       if (!st) return 'Not in the Lab';
-      if (st.after && plan.includes(st.after) && !strandPassed(st.after)) {
-        const first = S.find(x => x.id === st.after);
+      const before = [].concat(st.after || []).find(a => plan.includes(a) && !strandPassed(a));   // "after" can be a list (10/26)
+      if (before) {
+        const first = S.find(x => x.id === before);
         return `Pass ${first ? first.name : 'the strand before'} first`;
       }
       const i = st.lessons.indexOf(id);
