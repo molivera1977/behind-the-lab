@@ -34,6 +34,7 @@ const TOPICS = {
     'The class\'s own practice sites (fact sites, rounding, place value, reading practice) show each student\'s exact mistakes — those are what each lesson is tailored to.']],
   'step-pre': ['🎯 Show what you know', [
     'A few questions first (5 in math, 2 or 3 in reading), only on the first try.',
+    'Not when the child already tried the harder version of the lesson and did not pass it: a one-paragraph lesson after its full lesson, a Level 2 lesson after its Level 3 lesson. That try already showed the skill is not there yet, so the easier lesson is taught, not skipped (Mr. Olivera 10/27).',
     'All right = the lesson is skipped and counts as passed, so a child never sits through what they already know.',
     'Any wrong = the lesson teaches it, starting with "Now let\'s learn it."']],
   'step-watch': ['👀 Watch', [
